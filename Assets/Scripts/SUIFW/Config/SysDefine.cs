@@ -22,6 +22,7 @@ namespace SUIFW
 {
     #region 系统枚举类型
 
+	//窗体（位置）类型
     public enum UIFormType
     {
         Normal,
@@ -29,6 +30,7 @@ namespace SUIFW
         PopUp
     }
 
+	//窗体显示类型
     public enum UIFormShowMode
     {
         Normal,
@@ -36,6 +38,7 @@ namespace SUIFW
         HideOther
     }
 
+	//窗体透明度类型
     public enum UIFormLucenyType
     {
         //完全透明，不能穿透
@@ -47,6 +50,7 @@ namespace SUIFW
         //可以穿透
         Pentrate
     }
+	
     #endregion
 
 	public class SysDefine : MonoBehaviour 

@@ -20,10 +20,13 @@ namespace SUIFW
 	public class UIManager : MonoBehaviour 
 	{
         private static  UIManager _Instance = null;
-        private Dictionary<string, string> _DicFormsPaths;
-       // private Dictionary<string, BaseUIForm> _DicAllUIForms;
-      //  private Dictionary<string, BaseUIForm> _DicCurrentShowForms;
+        
+		private Dictionary<string, string> _DicFormsPaths;
+        private Dictionary<string, BaseUIForm> _DicAllUIForms;
+      	private Dictionary<string, BaseUIForm> _DicCurrentShowForms;
 
+		private Transform _TraCanvasTransform = null;
+		
         private Transform _TraNormal = null;
         private Transform _TraFixed = null;
         private Transform _TraPopUp = null;
@@ -33,7 +36,7 @@ namespace SUIFW
         {
             if(_Instance == null)
             {
-                _Instance = new UIManager();
+                _Instance = new GameObject("_UImanager").AddComponent<UIManager>();
             }
 
             return _Instance;
