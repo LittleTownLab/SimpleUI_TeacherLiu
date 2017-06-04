@@ -16,12 +16,10 @@ using System.Collections;
 
 namespace SUIFW
 {
-	public class UIType : MonoBehaviour 
+	public class UIType
 	{
-
-		void Start () 
-		{
-			
-		}
+		public UIFormType UIForm_Type = UIFormType.Normal;
+		public UIFormShowMode UIForm_ShowMode = UIFormShowMode.Normal;
+		public UIFormLucenyType UIForm_LucencyType = UIFormLucenyType.Lucency;
 	}
 }

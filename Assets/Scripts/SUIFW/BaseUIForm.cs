@@ -18,10 +18,39 @@ namespace SUIFW
 {
 	public class BaseUIForm : MonoBehaviour 
 	{
+		private UIType _CurrentUIType = new UIType();
 
-		void Start () 
+		public UIType CurrentUIType
 		{
-			
+			get { return _CurrentUIType; }
+			set { _CurrentUIType = value; }
+		}
+		 
+		
+		public UIType CurrentUiType
+		{
+			get { return _CurrentUIType; }
+			set { _CurrentUIType = value; }
+		}
+
+		public virtual void Display()
+		{
+			this.gameObject.SetActive(true);
+		}
+
+		public virtual void Redisplay()
+		{
+			this.gameObject.SetActive(false);
+		}
+
+		public virtual void Hiding()
+		{
+			this.gameObject.SetActive(false);
+		}
+
+		public virtual void Freeze()
+		{
+			this.gameObject.SetActive(true);
 		}
 	}
 }
